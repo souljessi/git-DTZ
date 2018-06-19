@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "DigitizingCity",
+    "script": "production.js",
+    "cwd": "E:/WS_WorkSpace/Svn-digitizing-city/DigitizingCity",
+    "exec_mode": "fork",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

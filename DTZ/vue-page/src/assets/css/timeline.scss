@@ -1,0 +1,93 @@
+// Color
+$primary-color: #2d8cf0;
+$info-color: #2db7f5;
+$success-color: #19be6b;
+$warning-color: #ff9900;
+$error-color: #ed3f14;
+$link-color: #2D8cF0;
+$link-hover-color: tint($link-color, 20%);
+$link-active-color: shade($link-color, 5%);
+$selected-color: fade($primary-color, 90%);
+$tooltip-color: #fff;
+$subsidiary-color: #80848f;
+$rate-star-color: #f5a623;
+$border-color-base: #2D8cF0; // outside
+$border-color-split: #2D8cF0; // inside
+$timeline-prefix-cls: "base-timeline";
+$timeline-color: $border-color-split;
+$font-size-base:14px;
+$font-size-small:14px;
+.base-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &-item {
+        margin: 0 !important;
+        padding: 0 0 10px 0;
+        list-style: none;
+        position: relative;
+        &-tail {
+            height: 100%;
+            border-left: 1px solid $timeline-color;
+            position: absolute;
+            left: 7px;
+            top: 0;
+        }
+        &-pending &-tail {
+            display: none;
+        }
+        &-head {
+            width: 13px;
+            height: 13px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            position: absolute;
+            &-blue {
+                border-color: $primary-color;
+                color: $primary-color;
+            }
+            &-red {
+                border-color: $error-color;
+                color: $error-color;
+            }
+            &-green {
+                border-color: $success-color;
+                color: $success-color;
+            }
+        }
+        &-head-custom {
+            width: 40px;
+            height: auto;
+            margin-top: 6px;
+            padding: 3px 0;
+            text-align: center;
+            line-height: 1;
+            border: 0;
+            border-radius: 0;
+            font-size: $font-size-base;
+            position: absolute;
+            left: -13px;
+            transform: translateY(-50%);
+        }
+        &-content {
+            padding: 1px 1px 5px 24px;
+            font-size: $font-size-small;
+            position: relative;
+            top: -3px;
+        }
+        &:last-child {
+            .base-timeline-item-tail {
+                display: none;
+            }
+        }
+    }
+    &-pending &-item:nth-last-of-type(2) {
+        .base-timeline-item-tail {
+            border-left: 1px solid $timeline-color;
+        }
+        // .base-timeline-item-content {
+        //     min-height: 48px;
+        // }
+    }
+}
