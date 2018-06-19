@@ -38,7 +38,6 @@ module.exports = {
         privateKey: 'kmlc-private-3302133', // 秘钥
         // expiresIn: 60 * 60 * 24,//1天, token过期时间,单位秒,
         expiresIn: 60 * 60 * 24 * 365, //365天, token过期时间,单位秒,
-        // expiresIn: 10, //1天, token过期时间,单位秒,
 
     },
     redis: {
