@@ -1,1 +1,0 @@
-{"cmd_num":"441698","data":"OK","function_code":"response_KeepAlive","result":"success"}
